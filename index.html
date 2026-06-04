@@ -27,7 +27,6 @@
       overflow-x: hidden;
     }
 
-    /* ─── HERO ─── */
     .hero {
       min-height: 100vh;
       background: linear-gradient(135deg, #0d0d1a 0%, #1a0a2e 50%, #0a1628 100%);
@@ -107,7 +106,6 @@
       z-index: 1;
     }
 
-    /* stats row */
     .hero-stats {
       display: flex;
       gap: 2rem;
@@ -141,7 +139,6 @@
       color: var(--muted);
     }
 
-    /* ─── SECTIONS ─── */
     section {
       max-width: 1100px;
       margin: 0 auto;
@@ -169,7 +166,6 @@
       margin: 5rem 0;
     }
 
-    /* ─── PROFILE ─── */
     .profile-card {
       background: linear-gradient(135deg, rgba(217,119,87,0.08), rgba(78,205,196,0.05));
       border: 1px solid rgba(217,119,87,0.2);
@@ -214,7 +210,6 @@
       color: var(--claude-orange);
     }
 
-    /* ─── COMPARISON ─── */
     .compare-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -256,14 +251,6 @@
     .compare-row .key { color: var(--muted); }
     .compare-row .val { font-weight: 600; }
 
-    .bar-wrap { margin-top: 2rem; }
-    .bar-label { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.3rem; display: flex; justify-content: space-between; }
-    .bar { height: 8px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden; margin-bottom: 0.8rem; }
-    .bar-fill { height: 100%; border-radius: 99px; transition: width 1s ease; }
-    .bar-fill.avg { background: #555; }
-    .bar-fill.me { background: linear-gradient(90deg, var(--claude-orange), var(--gold)); }
-
-    /* ─── TIMELINE ─── */
     .timeline { position: relative; margin-top: 3rem; }
 
     .timeline::before {
@@ -350,7 +337,6 @@
 
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-    /* ─── INSIGHTS ─── */
     .insight-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -376,7 +362,6 @@
     .insight-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
     .insight-card p { font-size: 0.85rem; color: var(--muted); }
 
-    /* ─── PROMPT SECTION ─── */
     .prompt-section {
       background: linear-gradient(135deg, rgba(217,119,87,0.08), rgba(78,205,196,0.05));
       border: 1px solid rgba(217,119,87,0.2);
@@ -428,7 +413,6 @@
 
     .copy-btn:hover { background: #c06544; transform: scale(1.03); }
 
-    /* ─── WHAT IS CLAUDE CODE ─── */
     .flow {
       display: flex;
       gap: 0;
@@ -466,7 +450,6 @@
     .flow-step h4 { font-size: 0.85rem; margin-bottom: 0.3rem; }
     .flow-step p { font-size: 0.75rem; color: var(--muted); }
 
-    /* ─── CTA / EVENT ─── */
     .event-card {
       background: linear-gradient(135deg, rgba(217,119,87,0.15), rgba(233,69,96,0.1));
       border: 1px solid rgba(217,119,87,0.3);
@@ -499,7 +482,6 @@
       box-shadow: 0 8px 30px rgba(217,119,87,0.5);
     }
 
-    /* ─── FOOTER ─── */
     footer {
       text-align: center;
       padding: 3rem 2rem;
@@ -508,7 +490,6 @@
       border-top: 1px solid rgba(255,255,255,0.06);
     }
 
-    /* ─── SCROLL ANIMATIONS ─── */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -519,7 +500,6 @@
       transform: translateY(0);
     }
 
-    /* ─── RESPONSIVE ─── */
     @media (max-width: 700px) {
       .profile-card { grid-template-columns: 1fr; }
       .compare-grid { grid-template-columns: 1fr; }
@@ -529,7 +509,6 @@
       .tl-dot { width: 46px; height: 46px; }
     }
 
-    /* ─── STAR PARTICLES ─── */
     .stars {
       position: fixed;
       top: 0; left: 0;
@@ -591,37 +570,21 @@
 </head>
 <body>
 
-<!-- Star field -->
 <div class="stars" id="stars"></div>
 
-<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
 <div class="hero">
   <div class="event-badge">🎤 やさしいLT大会『Claude Code 編』 #1</div>
   <h1>非エンジニアが4ヶ月で<br>複数プロジェクトを自動化してみた</h1>
   <p class="subtitle">Claude Code と歩んだ軌跡 — 2026年2月〜6月</p>
   <p class="period">兵庫県出身 ・ 30代男性 ・ IT営業/DX ・ 副業並行</p>
-
   <div class="hero-stats">
-    <div class="hero-stat">
-      <span class="num">7</span>
-      <span class="label">プロジェクト完成</span>
-    </div>
-    <div class="hero-stat">
-      <span class="num">4</span>
-      <span class="label">ヶ月</span>
-    </div>
-    <div class="hero-stat">
-      <span class="num">0→1</span>
-      <span class="label">エンジニア経験</span>
-    </div>
-    <div class="hero-stat">
-      <span class="num">∞</span>
-      <span class="label">の可能性</span>
-    </div>
+    <div class="hero-stat"><span class="num">7</span><span class="label">プロジェクト完成</span></div>
+    <div class="hero-stat"><span class="num">4</span><span class="label">ヶ月</span></div>
+    <div class="hero-stat"><span class="num">0→1</span><span class="label">エンジニア経験</span></div>
+    <div class="hero-stat"><span class="num">∞</span><span class="label">の可能性</span></div>
   </div>
 </div>
 
-<!-- ═══════════════════════════ WHO AM I ═══════════════════════════ -->
 <section class="fade-in">
   <p class="section-tag">Profile</p>
   <h2>誰が作ったのか</h2>
@@ -647,16 +610,12 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ COMPARISON ═══════════════════════════ -->
 <div class="divider"></div>
 
 <section class="fade-in">
   <p class="section-tag">Benchmark</p>
   <h2>平均的な Claude ユーザーと比べると？</h2>
-  <p style="color:var(--muted);margin-bottom:1rem">
-    Anthropic社の公開情報・各種調査レポートから推計される平均ユーザー像と比較します。
-  </p>
-
+  <p style="color:var(--muted);margin-bottom:1rem">Anthropic社の公開情報・各種調査レポートから推計される平均ユーザー像と比較します。</p>
   <div class="compare-grid">
     <div class="compare-card them">
       <h3>👤 平均的な Claude ユーザー</h3>
@@ -677,7 +636,6 @@
       <div class="compare-row"><span class="key">背景</span><span class="val"><strong style="color:var(--claude-orange)">非エンジニア営業職</strong></span></div>
     </div>
   </div>
-
   <div style="margin-top:3rem">
     <h3 style="margin-bottom:1.5rem;font-size:1.2rem">利用深度スコア（推計）</h3>
     <div class="progress-bar-container fade-in">
@@ -707,291 +665,119 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ TIMELINE ═══════════════════════════ -->
 <div class="divider"></div>
 
 <section class="fade-in">
   <p class="section-tag">Timeline</p>
   <h2>4ヶ月の軌跡</h2>
   <p style="color:var(--muted);margin-bottom:2rem">2026年初頭〜6月。すべてClaude Codeがメイン開発ツール。</p>
-
   <div class="timeline">
-
-    <!-- 1 -->
     <div class="tl-item fade-in">
       <div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">📄</div>
       <div class="tl-content">
-        <div class="tl-header">
-          <span class="tl-title">行政書類PDF自動化システム</span>
-          <span class="tl-type type-client">外部受託</span>
-        </div>
-        <p class="tl-desc">
-          技能実習関連の行政様式を単一データモデルからJSONマッピングで自動生成。
-          複数の申請書が1つのデータ入力から生成される仕組みを構築。
-        </p>
-        <div class="tech-stack">
-          <span class="tech">Next.js</span>
-          <span class="tech">React-PDF</span>
-          <span class="tech">TypeScript</span>
-          <span class="tech">JSON Mapping</span>
-        </div>
-        <div class="tl-status status-live">
-          <span class="status-dot"></span> 実装完了・運用中
-        </div>
+        <div class="tl-header"><span class="tl-title">行政書類PDF自動化システム</span><span class="tl-type type-client">外部受託</span></div>
+        <p class="tl-desc">技能実習関連の行政様式を単一データモデルからJSONマッピングで自動生成。複数の申請書が1つのデータ入力から生成される仕組みを構築。</p>
+        <div class="tech-stack"><span class="tech">Next.js</span><span class="tech">React-PDF</span><span class="tech">TypeScript</span><span class="tech">JSON Mapping</span></div>
+        <div class="tl-status status-live"><span class="status-dot"></span> 実装完了・運用中</div>
       </div>
     </div>
-
-    <!-- 2 -->
     <div class="tl-item fade-in">
       <div class="tl-dot" style="border-color:var(--green);color:var(--green)">🔒</div>
       <div class="tl-content">
-        <div class="tl-header">
-          <span class="tl-title">agentlens — AIエージェント監査ログOSS</span>
-          <span class="tl-type type-oss">OSS</span>
-        </div>
-        <p class="tl-desc">
-          <code>pip install agentlens-io</code> で使えるAIエージェントの行動ログ記録・
-          改ざん検知・危険パターン検知ライブラリ。v0.4.0公開済み。
-          SHA-256ハッシュチェーン・pre-executionフック・36テスト通過。
-          note連載「善性AIエージェントへの道」#6まで公開。
-        </p>
-        <div class="tech-stack">
-          <span class="tech">Python</span>
-          <span class="tech">SHA-256 Chain</span>
-          <span class="tech">PyPI</span>
-          <span class="tech">pytest</span>
-        </div>
-        <div class="tl-status status-live">
-          <span class="status-dot"></span> v0.4.0 稼働中（PyPI公開済み）
-        </div>
+        <div class="tl-header"><span class="tl-title">agentlens — AIエージェント監査ログOSS</span><span class="tl-type type-oss">OSS</span></div>
+        <p class="tl-desc"><code>pip install agentlens-io</code> で使えるAIエージェントの行動ログ記録・改ざん検知・危険パターン検知ライブラリ。v0.4.0公開済み。SHA-256ハッシュチェーン・pre-executionフック・36テスト通過。note連載「善性AIエージェントへの道」#6まで公開。</p>
+        <div class="tech-stack"><span class="tech">Python</span><span class="tech">SHA-256 Chain</span><span class="tech">PyPI</span><span class="tech">pytest</span></div>
+        <div class="tl-status status-live"><span class="status-dot"></span> v0.4.0 稼働中（PyPI公開済み）</div>
       </div>
     </div>
-
-    <!-- 3 -->
     <div class="tl-item fade-in">
-      <div class="tl-dot" style="border-color:#a78bfa;color:#a78bfa)">🎬</div>
+      <div class="tl-dot" style="border-color:#a78bfa;color:#a78bfa">🎬</div>
       <div class="tl-content">
-        <div class="tl-header">
-          <span class="tl-title">経済解説 YouTube Shorts 自動化パイプライン</span>
-          <span class="tl-type type-personal">個人</span>
-        </div>
-        <p class="tl-desc">
-          RSS収集 → Groq API台本生成 → VOICEVOX音声 → ffmpeg動画合成 → YouTube自動投稿の
-          フルパイプライン。アフィリエイト（金融商品）実装済み。17本以上投稿済み。
-        </p>
-        <div class="tech-stack">
-          <span class="tech">Python</span>
-          <span class="tech">Groq API</span>
-          <span class="tech">VOICEVOX</span>
-          <span class="tech">ffmpeg</span>
-          <span class="tech">YouTube API</span>
-          <span class="tech">A8.net</span>
-        </div>
-        <div class="tl-status status-live">
-          <span class="status-dot"></span> 稼働中（毎日1本運用）
-        </div>
+        <div class="tl-header"><span class="tl-title">経済解説 YouTube Shorts 自動化パイプライン</span><span class="tl-type type-personal">個人</span></div>
+        <p class="tl-desc">RSS収集 → Groq API台本生成 → VOICEVOX音声 → ffmpeg動画合成 → YouTube自動投稿のフルパイプライン。アフィリエイト（金融商品）実装済み。17本以上投稿済み。</p>
+        <div class="tech-stack"><span class="tech">Python</span><span class="tech">Groq API</span><span class="tech">VOICEVOX</span><span class="tech">ffmpeg</span><span class="tech">YouTube API</span><span class="tech">A8.net</span></div>
+        <div class="tl-status status-live"><span class="status-dot"></span> 稼働中（毎日1本運用）</div>
       </div>
     </div>
-
-    <!-- 4 -->
     <div class="tl-item fade-in">
       <div class="tl-dot" style="border-color:var(--accent);color:var(--accent)">🛡️</div>
       <div class="tl-content">
-        <div class="tl-header">
-          <span class="tl-title">Aletheia — AIセキュリティ診断SaaS</span>
-          <span class="tl-type type-saas">SaaS</span>
-        </div>
-        <p class="tl-desc">
-          ドメインを入力するとSSL/DNS/HTTPヘッダーをスキャンしてAIがセキュリティスコアカードを生成。
-          「脅かさず正直に」が差別化軸。Railway + Vercelでデプロイ済み。
-        </p>
-        <div class="tech-stack">
-          <span class="tech">FastAPI</span>
-          <span class="tech">Next.js</span>
-          <span class="tech">Neon PostgreSQL</span>
-          <span class="tech">Claude Haiku</span>
-          <span class="tech">Railway</span>
-          <span class="tech">Vercel</span>
-        </div>
-        <div class="tl-status status-wip">
-          <span class="status-dot"></span> デプロイ済み・LP準備中
-        </div>
+        <div class="tl-header"><span class="tl-title">Aletheia — AIセキュリティ診断SaaS</span><span class="tl-type type-saas">SaaS</span></div>
+        <p class="tl-desc">ドメインを入力するとSSL/DNS/HTTPヘッダーをスキャンしてAIがセキュリティスコアカードを生成。「脅かさず正直に」が差別化軸。Railway + Vercelでデプロイ済み。</p>
+        <div class="tech-stack"><span class="tech">FastAPI</span><span class="tech">Next.js</span><span class="tech">Neon PostgreSQL</span><span class="tech">Claude Haiku</span><span class="tech">Railway</span><span class="tech">Vercel</span></div>
+        <div class="tl-status status-wip"><span class="status-dot"></span> デプロイ済み・LP準備中</div>
       </div>
     </div>
-
-    <!-- 5 -->
     <div class="tl-item fade-in">
       <div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">🏗️</div>
       <div class="tl-content">
-        <div class="tl-header">
-          <span class="tl-title">建設業向け工事管理Webアプリ</span>
-          <span class="tl-type type-client">外部受託</span>
-        </div>
-        <p class="tl-desc">
-          工事・出面・給与・経費・日報を一元管理するWebアプリ。
-          SQLite→DynamoDB移行・AWS Lambdaサーバーレス構成に完全移行。
-          2026年6月5日、全フェーズ完了・本番稼働開始。
-        </p>
-        <div class="tech-stack">
-          <span class="tech">Express.js</span>
-          <span class="tech">DynamoDB</span>
-          <span class="tech">AWS Lambda</span>
-          <span class="tech">API Gateway</span>
-          <span class="tech">CloudFront</span>
-          <span class="tech">SAM</span>
-        </div>
-        <div class="tl-status status-live">
-          <span class="status-dot"></span> 2026/6/5 全フェーズ完了・本番稼働
-        </div>
+        <div class="tl-header"><span class="tl-title">建設業向け工事管理Webアプリ</span><span class="tl-type type-client">外部受託</span></div>
+        <p class="tl-desc">工事・出面・給与・経費・日報を一元管理するWebアプリ。SQLite→DynamoDB移行・AWS Lambdaサーバーレス構成に完全移行。2026年6月5日、全フェーズ完了・本番稼働開始。</p>
+        <div class="tech-stack"><span class="tech">Express.js</span><span class="tech">DynamoDB</span><span class="tech">AWS Lambda</span><span class="tech">API Gateway</span><span class="tech">CloudFront</span><span class="tech">SAM</span></div>
+        <div class="tl-status status-live"><span class="status-dot"></span> 2026/6/5 全フェーズ完了・本番稼働</div>
       </div>
     </div>
-
-    <!-- 6 -->
     <div class="tl-item fade-in">
       <div class="tl-dot" style="border-color:#f59e0b;color:#f59e0b">🎰</div>
       <div class="tl-content">
-        <div class="tl-header">
-          <span class="tl-title">ギャンブル解説 Shorts + Note 自動化パイプライン</span>
-          <span class="tl-type type-client">外部受託</span>
-        </div>
-        <p class="tl-desc">
-          パチンコ・スロット・競輪・競馬・競艇・カジノ解説のYouTube Shorts + Note記事を
-          全自動生成するパイプライン。コンテンツDB 13本・Note初回公開済み。
-        </p>
-        <div class="tech-stack">
-          <span class="tech">Python</span>
-          <span class="tech">Claude API</span>
-          <span class="tech">ffmpeg</span>
-          <span class="tech">Note API</span>
-          <span class="tech">YouTube API</span>
-        </div>
-        <div class="tl-status status-live">
-          <span class="status-dot"></span> 稼働中・量産フェーズ
-        </div>
+        <div class="tl-header"><span class="tl-title">ギャンブル解説 Shorts + Note 自動化パイプライン</span><span class="tl-type type-client">外部受託</span></div>
+        <p class="tl-desc">パチンコ・スロット・競輪・競馬・競艇・カジノ解説のYouTube Shorts + Note記事を全自動生成するパイプライン。コンテンツDB 13本・Note初回公開済み。</p>
+        <div class="tech-stack"><span class="tech">Python</span><span class="tech">Claude API</span><span class="tech">ffmpeg</span><span class="tech">Note API</span><span class="tech">YouTube API</span></div>
+        <div class="tl-status status-live"><span class="status-dot"></span> 稼働中・量産フェーズ</div>
       </div>
     </div>
-
-    <!-- 7 -->
     <div class="tl-item fade-in">
       <div class="tl-dot" style="border-color:var(--green);color:var(--green)">📅</div>
       <div class="tl-content">
-        <div class="tl-header">
-          <span class="tl-title">卓上カレンダーPWA</span>
-          <span class="tl-type type-client">新規受託</span>
-        </div>
-        <p class="tl-desc">
-          家族・カップル向けシェアカレンダーPWA。日付タップ→全画面デイビュー→予定CRUD。
-          IndexedDBでオフライン動作・認証不要。将来的にUUID共有機能を追加予定。
-          2026年6月3日開始→即本番稼働。
-        </p>
-        <div class="tech-stack">
-          <span class="tech">Vite</span>
-          <span class="tech">React</span>
-          <span class="tech">TypeScript</span>
-          <span class="tech">PWA</span>
-          <span class="tech">Dexie.js</span>
-          <span class="tech">Vercel</span>
-        </div>
-        <div class="tl-status status-live">
-          <span class="status-dot"></span> 本番稼働中（Vercel）
-        </div>
+        <div class="tl-header"><span class="tl-title">卓上カレンダーPWA</span><span class="tl-type type-client">新規受託</span></div>
+        <p class="tl-desc">家族・カップル向けシェアカレンダーPWA。日付タップ→全画面デイビュー→予定CRUD。IndexedDBでオフライン動作・認証不要。2026年6月3日開始→即本番稼働。</p>
+        <div class="tech-stack"><span class="tech">Vite</span><span class="tech">React</span><span class="tech">TypeScript</span><span class="tech">PWA</span><span class="tech">Dexie.js</span><span class="tech">Vercel</span></div>
+        <div class="tl-status status-live"><span class="status-dot"></span> 本番稼働中（Vercel）</div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ═══════════════════════════ WHAT IS CLAUDE CODE ═══════════════════════════ -->
 <div class="divider"></div>
 
 <section class="fade-in">
   <p class="section-tag">What is Claude Code?</p>
   <h2>Claude Code って何をするもの？</h2>
-  <p style="color:var(--muted);margin-top:0.5rem;margin-bottom:2rem">
-    ターミナルで動く AI エージェント。コードを書く・実行する・ファイルを操作する — 全部お任せできる。
-  </p>
-
+  <p style="color:var(--muted);margin-top:0.5rem;margin-bottom:2rem">ターミナルで動く AI エージェント。コードを書く・実行する・ファイルを操作する — 全部お任せできる。</p>
   <div class="flow">
-    <div class="flow-step">
-      <div class="flow-icon">💬</div>
-      <h4>日本語で依頼</h4>
-      <p>「〜を作って」と打つだけ</p>
-    </div>
-    <div class="flow-step">
-      <div class="flow-icon">🧠</div>
-      <h4>Claude が設計</h4>
-      <p>構成・コード・テストを考える</p>
-    </div>
-    <div class="flow-step">
-      <div class="flow-icon">⚡</div>
-      <h4>ファイル生成・編集</h4>
-      <p>実際にコードを書く</p>
-    </div>
-    <div class="flow-step">
-      <div class="flow-icon">🚀</div>
-      <h4>デプロイまで</h4>
-      <p>git push / Vercel も指示できる</p>
-    </div>
+    <div class="flow-step"><div class="flow-icon">💬</div><h4>日本語で依頼</h4><p>「〜を作って」と打つだけ</p></div>
+    <div class="flow-step"><div class="flow-icon">🧠</div><h4>Claude が設計</h4><p>構成・コード・テストを考える</p></div>
+    <div class="flow-step"><div class="flow-icon">⚡</div><h4>ファイル生成・編集</h4><p>実際にコードを書く</p></div>
+    <div class="flow-step"><div class="flow-icon">🚀</div><h4>デプロイまで</h4><p>git push / Vercel も指示できる</p></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ INSIGHTS ═══════════════════════════ -->
 <div class="divider"></div>
 
 <section class="fade-in">
   <p class="section-tag">Insights</p>
   <h2>この軌跡が教えてくれること</h2>
   <p style="color:var(--muted);margin-bottom:1rem">非エンジニアでも、LT参加者全員に刺さるはずのこと。</p>
-
   <div class="insight-grid">
-    <div class="insight-card fade-in">
-      <div class="insight-icon">🚀</div>
-      <h3>「作った」という事実が最強の説得力</h3>
-      <p>ドキュメントより、動くURLを見せる方が100倍早い。Claude Codeなら当日デプロイも現実。</p>
-    </div>
-    <div class="insight-card fade-in">
-      <div class="insight-icon">🔧</div>
-      <h3>エンジニアじゃなくても「難しかった」はある</h3>
-      <p>AWS IAM・DynamoDB移行・CORS設定… 壁は全員に来る。ただしClaude Codeと一緒に乗り越えられる。</p>
-    </div>
-    <div class="insight-card fade-in">
-      <div class="insight-icon">💡</div>
-      <h3>「できた」は積み重なる</h3>
-      <p>1つ動いたら2つ目は早い。4ヶ月で7プロジェクトはその証明。最初の1本が全てを変える。</p>
-    </div>
-    <div class="insight-card fade-in">
-      <div class="insight-icon">🤔</div>
-      <h3>Codex / Antigravity との違いは「対話」</h3>
-      <p>Claude Codeは「なぜ」を説明してくれる。学びながら作れるのが非エンジニアには最強。</p>
-    </div>
-    <div class="insight-card fade-in">
-      <div class="insight-icon">🌏</div>
-      <h3>現場の人こそ使うべき</h3>
-      <p>業務の痛みを一番知っているのは現場の人。その知識×Claude Codeで「自分専用ツール」が生まれる。</p>
-    </div>
-    <div class="insight-card fade-in">
-      <div class="insight-icon">📈</div>
-      <h3>副業・受託への橋渡し</h3>
-      <p>「作れる」が証明できれば、案件は来る。エンジニア資格は要らない、動くものが全てを語る。</p>
-    </div>
+    <div class="insight-card fade-in"><div class="insight-icon">🚀</div><h3>「作った」という事実が最強の説得力</h3><p>ドキュメントより、動くURLを見せる方が100倍早い。Claude Codeなら当日デプロイも現実。</p></div>
+    <div class="insight-card fade-in"><div class="insight-icon">🔧</div><h3>エンジニアじゃなくても「難しかった」はある</h3><p>AWS IAM・DynamoDB移行・CORS設定… 壁は全員に来る。ただしClaude Codeと一緒に乗り越えられる。</p></div>
+    <div class="insight-card fade-in"><div class="insight-icon">💡</div><h3>「できた」は積み重なる</h3><p>1つ動いたら2つ目は早い。4ヶ月で7プロジェクトはその証明。最初の1本が全てを変える。</p></div>
+    <div class="insight-card fade-in"><div class="insight-icon">🤔</div><h3>Codex / Antigravity との違いは「対話」</h3><p>Claude Codeは「なぜ」を説明してくれる。学びながら作れるのが非エンジニアには最強。</p></div>
+    <div class="insight-card fade-in"><div class="insight-icon">🌏</div><h3>現場の人こそ使うべき</h3><p>業務の痛みを一番知っているのは現場の人。その知識×Claude Codeで「自分専用ツール」が生まれる。</p></div>
+    <div class="insight-card fade-in"><div class="insight-icon">📈</div><h3>副業・受託への橋渡し</h3><p>「作れる」が証明できれば、案件は来る。エンジニア資格は要らない、動くものが全てを語る。</p></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ PROMPT ═══════════════════════════ -->
 <div class="divider"></div>
 
 <section class="fade-in">
   <p class="section-tag">Try it now</p>
   <h2>その場で試せる、魔法のプロンプト 🪄</h2>
-  <p style="color:var(--muted);margin-bottom:0.5rem">
-    Claude Code（またはClaude.ai）を開いて、↓を貼り付けてみてください。<br>
-    今夜あなたの「第一歩」が始まります。
-  </p>
-
+  <p style="color:var(--muted);margin-bottom:0.5rem">Claude Code（またはClaude.ai）を開いて、↓を貼り付けてみてください。<br>今夜あなたの「第一歩」が始まります。</p>
   <div class="prompt-section">
     <h3 style="margin-bottom:0.3rem">🌱 ステップ1 ： 最初のLPを作る</h3>
     <p style="color:var(--muted);font-size:0.9rem;margin-bottom:0.5rem">あなたの「自己紹介LP」を1つのHTMLファイルで作ります。</p>
-    <div class="prompt-box">
+    <div class="prompt-box" id="prompt1">
       <span class="prompt-label">Claude Code プロンプト</span>
 あなたはWebデザイナー兼エンジニアです。
 以下の情報を元に、私の自己紹介ランディングページを1ファイルのHTMLで作成してください。
@@ -1010,14 +796,12 @@
 - CSSはstyleタグにまとめて1ファイルで完結させること
 - 絵文字でイラスト的な表現を使ってOK
 
-完成したら index.html として保存してください。
-    </div>
-    <button class="copy-btn" onclick="copyPrompt(this, 'prompt1')">📋 コピーする</button>
-
+完成したら index.html として保存してください。</div>
+    <button class="copy-btn" onclick="copyPrompt('prompt1', this)">📋 コピーする</button>
     <div style="margin-top:2rem">
       <h3 style="margin-bottom:0.3rem">🚀 ステップ2 ： Vercelに公開する</h3>
       <p style="color:var(--muted);font-size:0.9rem;margin-bottom:0.5rem">作ったHTMLをインターネットに公開します（無料・3分）。</p>
-      <div class="prompt-box">
+      <div class="prompt-box" id="prompt2">
         <span class="prompt-label">Claude Code プロンプト</span>
 先ほど作った index.html を Vercel で公開したいです。
 以下の手順で進めてください。
@@ -1026,25 +810,18 @@
 2. GitHub に新しいリポジトリを作成して push する
 3. Vercel CLI でデプロイするか、Vercel の Web UI でデプロイする方法を教えてください
 
-Vercel は無料プランで大丈夫です。公開後のURLを教えてください。
-      </div>
-      <button class="copy-btn" onclick="copyPrompt(this, 'prompt2')">📋 コピーする</button>
+Vercel は無料プランで大丈夫です。公開後のURLを教えてください。</div>
+      <button class="copy-btn" onclick="copyPrompt('prompt2', this)">📋 コピーする</button>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════ EVENT CTA ═══════════════════════════ -->
 <section class="fade-in">
   <div class="event-card">
     <div style="font-size:3rem;margin-bottom:1rem">🎤</div>
     <h2>やさしいLT大会『Claude Code 編』 #1</h2>
-    <p>
-      作ってみた・難しかった・できた・他のツールが良かった<br>
-      すべての現場の方のための、やさしいClaude Code LT大会
-    </p>
-    <a href="https://biosbootcamp.connpass.com/event/392765/" target="_blank" rel="noopener" class="btn-primary">
-      イベントページを見る →
-    </a>
+    <p>作ってみた・難しかった・できた・他のツールが良かった<br>すべての現場の方のための、やさしいClaude Code LT大会</p>
+    <a href="https://biosbootcamp.connpass.com/event/392765/" target="_blank" rel="noopener" class="btn-primary">イベントページを見る →</a>
     <div style="margin-top:2rem;color:var(--muted);font-size:0.85rem">
       <p>このページは Claude Code で作られ、Vercel でデプロイされています</p>
       <p style="margin-top:0.3rem">github.com/wolvesgale/Claude-Code-LT</p>
@@ -1058,28 +835,18 @@ Vercel は無料プランで大丈夫です。公開後のURLを教えてくだ�
 </footer>
 
 <script>
-  // Star field
   const starsEl = document.getElementById('stars');
   for (let i = 0; i < 120; i++) {
     const s = document.createElement('div');
     s.className = 'star';
-    s.style.cssText = `
-      left: ${Math.random()*100}%;
-      top: ${Math.random()*100}%;
-      --d: ${2 + Math.random()*4}s;
-      --delay: ${-Math.random()*6}s;
-      width: ${Math.random() > 0.7 ? 3 : 2}px;
-      height: ${Math.random() > 0.7 ? 3 : 2}px;
-    `;
+    s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${2+Math.random()*4}s;--delay:${-Math.random()*6}s;width:${Math.random()>0.7?3:2}px;height:${Math.random()>0.7?3:2}px`;
     starsEl.appendChild(s);
   }
 
-  // Intersection Observer for fade-in & progress bars
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
-        // Animate progress bars inside
         e.target.querySelectorAll('.pb-fill').forEach(bar => {
           const w = bar.dataset.width;
           if (w) setTimeout(() => bar.style.width = w + '%', 200);
@@ -1090,17 +857,8 @@ Vercel は無料プランで大丈夫です。公開後のURLを教えてくだ�
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // Animate bars that might already be visible
-  document.querySelectorAll('.pb-fill[data-width]').forEach(bar => {
-    const rect = bar.closest('.progress-bar-container').getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      bar.style.width = bar.dataset.width + '%';
-    }
-  });
-
-  // Copy prompt
-  function copyPrompt(btn, id) {
-    const box = btn.previousElementSibling;
+  function copyPrompt(id, btn) {
+    const box = document.getElementById(id);
     const text = box.innerText.replace('Claude Code プロンプト\n', '').trim();
     navigator.clipboard.writeText(text).then(() => {
       btn.textContent = '✅ コピーしました！';
