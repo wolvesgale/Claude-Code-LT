@@ -441,80 +441,142 @@
 <!-- ═══ TRY NOW ═══ -->
 <div class="divider"></div>
 <section class="fi" id="try-now">
-  <p class="section-tag">Try it Now 🪄</p>
-  <h2>今すぐコピーして<br>Claude に貼り付けよう</h2>
+  <p class="section-tag">デモ用プロンプト 🪄</p>
+  <h2>このプロンプトを Claude に<br>貼り付けてみよう</h2>
   <p style="color:var(--muted);margin-bottom:0">
-    claude.ai または Claude Code を開いて、下のプロンプトをそのまま貼り付けてください。<br>
-    <strong>約60秒で動くHTMLが生まれます。</strong>
+    あなたの立場（作った・詰まった・他ツール派・非エンジニア）を選んで<br>
+    claude.ai に貼り付けるだけ。<strong>約60秒で動くLPが生まれます。</strong>
   </p>
 
   <div class="prompt-wrap">
     <div class="prompt-tabs">
-      <button class="tab-btn active" onclick="switchTab('lp', this)">🌱 自己紹介LPを作る</button>
-      <button class="tab-btn" onclick="switchTab('auto', this)">⚡ 現場の作業を自動化</button>
-      <button class="tab-btn" onclick="switchTab('tool', this)">🛠️ 業務ツールを作る</button>
+      <button class="tab-btn active" onclick="switchTab('made', this)">🛠️ つくってみた人向け</button>
+      <button class="tab-btn" onclick="switchTab('hard', this)">🧱 ここが難しかった人向け</button>
+      <button class="tab-btn" onclick="switchTab('other', this)">🤔 他ツール派・迷ってる人向け</button>
+      <button class="tab-btn" onclick="switchTab('noneng', this)">🌱 非エンジニア・現場の人向け</button>
     </div>
 
-    <div class="tab-content active" id="tab-lp">
-      <div class="prompt-box" id="box-lp">あなたはWebデザイナー兼エンジニアです。
-以下の情報を元に、私の自己紹介ランディングページを1ファイルのHTMLで作成してください。
+    <div class="tab-content active" id="tab-made">
+      <div class="prompt-box" id="box-made">あなたはWebデザイナー兼エンジニアです。
 
-【私の情報】
-・名前（ニックネーム）: [あなたの名前]
-・肩書き / 職業: [例: エンジニア、営業、デザイナー]
-・得意なこと・好きなこと: [自由に書く]
-・作ったもの・やってみたいこと: [自由に書く]
-・一言メッセージ: [自由に書く]
+「Claude Code で何かを作ってみた人」向けの、次の一歩を後押しするランディングページを
+1ファイルのHTMLで作成してください。
 
-【要件】
-- ダークテーマ・モダンなデザイン
-- スクロールアニメーションあり
-- スマホ対応（レスポンシブ）
-- CSS・JSはHTMLファイル内に完結
-- 絵文字でイラスト的な表現をたっぷり使ってOK
+【ページの目的】
+- 「作れた！」という体験をさらに深めてもらう
+- 次に作りたいものを見つけるヒントを提供する
+- 同じく作った仲間と繋がれる場所として機能する
 
-完成したら index.html として保存してください。
-      <button class="copy-btn" onclick="copyBox('box-lp', this)">📋 コピーする</button></div>
+【ページ構成】
+1. ヒーロー：「作った、あなたはすでにクリエイターだ」
+2. 次に作れるもの5選（アイデアカード形式、絵文字で表現）
+3. Claude Code を使いこなすコツ3つ（初心者が見落としがちな点）
+4. 「もっと難しいことに挑戦する」ためのプロンプト例（コピー可能なボックス）
+5. CTA：「次の作品を作り始めよう」
+
+【デザイン要件】
+- 1ファイルHTML（CSS・JS込み）で完結
+- ダークテーマ、Claudeオレンジ（#d97757）アクセント
+- スクロールフェードインアニメーション
+- スマホ対応
+- 絵文字をイラスト代わりに活用
+
+first-step.html として保存してください。
+      <button class="copy-btn" onclick="copyBox('box-made', this)">📋 コピーする</button></div>
     </div>
 
-    <div class="tab-content" id="tab-auto">
-      <div class="prompt-box" id="box-auto">私の仕事で毎日繰り返している面倒な作業があります。
-Claude Code を使って自動化するアイデアとサンプルコードを作ってください。
+    <div class="tab-content" id="tab-hard">
+      <div class="prompt-box" id="box-hard">あなたはWebデザイナー兼エンジニアです。
 
-【私の作業内容】
-[ここに具体的に書く。例：
- - 毎朝Excelをコピーして別のシートに貼り付け、集計している
- - PDFを受け取ってデータを手入力している
- - 毎日同じメール文面をコピペして送っている
- など]
+「Claude Code を使ってみたけど難しかった・詰まった人」が
+「あ、こうすればよかったのか」と気づけるランディングページを
+1ファイルのHTMLで作成してください。
 
-まず「自動化できる部分」と「難しい部分」を正直に分けて教えてください。
-その後、できるところから小さく始めるサンプルコードを書いてください。
-実行方法も丁寧に教えてください。
-      <button class="copy-btn" onclick="copyBox('box-auto', this)">📋 コピーする</button></div>
+【ページの目的】
+- 詰まるのは当然、みんな通る道だと伝える
+- よくある壁と具体的な突破法を提示する
+- 「もう一度試してみよう」という気持ちにさせる
+
+【ページ構成】
+1. ヒーロー：「詰まった、それが成長の証。」
+2. よくある壁5つ（エラー対処・CORS・デプロイ・APIキー・型エラーなど）と突破法カード
+3. Claude Code に「うまく伝える」コツ（エラーの貼り方、指示の粒度）
+4. 「詰まったときのテンプレプロンプト」（コピー可能ボックス）
+   例：「以下のエラーが出ています。原因と修正方法を教えてください。[エラー貼り付け]」
+5. CTA：「もう一度、始めよう」
+
+【デザイン要件】
+- 1ファイルHTML（CSS・JS込み）で完結
+- ダークテーマ、Claudeオレンジ（#d97757）アクセント
+- スクロールフェードインアニメーション
+- スマホ対応
+- 絵文字をイラスト代わりに活用
+
+first-step.html として保存してください。
+      <button class="copy-btn" onclick="copyBox('box-hard', this)">📋 コピーする</button></div>
     </div>
 
-    <div class="tab-content" id="tab-tool">
-      <div class="prompt-box" id="box-tool">私の職場で使える簡単なWebツールを作ってほしいです。
+    <div class="tab-content" id="tab-other">
+      <div class="prompt-box" id="box-other">あなたはWebデザイナー兼エンジニアです。
 
-【作りたいもの】
-[例：
- - チームの日報を入力・閲覧できるWebページ
- - 見積書をフォームで入力してPDF出力できるツール
- - 工事の進捗を管理できる一覧表
- など]
+「Codex・Cursor・Windsurf など他のAIコーディングツールを使っている人、
+または Claude Code と比較検討中の人」向けの、フラットな比較と
+Claude Code の特徴を伝えるランディングページを1ファイルのHTMLで作成してください。
 
-【使う人】
-[例：社内のパソコンに詳しくないスタッフ 5名程度]
+【ページの目的】
+- 「どのツールが自分に合うか」を自分で判断できる情報を提供する
+- Claude Code の強みを押しつけがましくなく伝える
+- 「とりあえず試してみよう」と思ってもらう
 
-【要件】
-- シンプルで使いやすいUI
-- データはブラウザ内（LocalStorage）に保存でOK
-- インストール不要、HTMLファイルをダブルクリックで使えるのが理想
-- スマホでも使えると嬉しい
+【ページ構成】
+1. ヒーロー：「どのツールが正解？　答えは、あなたの現場にある。」
+2. 主要AIコーディングツール比較表（Claude Code / Cursor / Codex / Windsurf）
+   観点：対話力 / 価格 / IDE統合 / 初心者向け度 / 日本語対応
+3. 「Claude Code がとくに強い場面」3つ（非エンジニア向け / 対話重視 / デプロイまで一気に）
+4. まず5分試せるプロンプト例（コピー可能ボックス）
+5. CTA：「自分の目で確かめよう」
 
-1ファイルのHTMLで作ってください。
-      <button class="copy-btn" onclick="copyBox('box-tool', this)">📋 コピーする</button></div>
+【デザイン要件】
+- 1ファイルHTML（CSS・JS込み）で完結
+- ダークテーマ、Claudeオレンジ（#d97757）アクセント
+- スクロールフェードインアニメーション
+- スマホ対応
+- 絵文字をイラスト代わりに活用
+
+first-step.html として保存してください。
+      <button class="copy-btn" onclick="copyBox('box-other', this)">📋 コピーする</button></div>
+    </div>
+
+    <div class="tab-content" id="tab-noneng">
+      <div class="prompt-box" id="box-noneng">あなたはWebデザイナー兼エンジニアです。
+
+「エンジニアではない現場の人（営業・製造・医療・デザイン・事務など）」が
+Claude Code を使って自分の仕事を変えるきっかけになるランディングページを
+1ファイルのHTMLで作成してください。
+
+【ページの目的】
+- 「自分でも使えそう」という安心感を与える
+- コードが書けなくても作れるという事実を具体例で示す
+- 今日からできる最初の一歩を明確に提示する
+
+【ページ構成】
+1. ヒーロー：「コードは書けなくていい。あなたの現場の言葉が、そのままコードになる。」
+2. 現場別・作れるもの例（営業/事務/製造/医療/飲食など5職種）カード形式
+3. 実際にかかる時間（最初のページ：30分、自動化ツール：1〜2時間）タイムライン表示
+4. 今すぐ試せるプロンプト（コピー可能ボックス）
+   「私は[職業]です。毎日[作業内容]に[時間]かかっています。
+    Claude Code でこの作業を楽にするアイデアと最初の一歩を教えてください。」
+5. CTA：「あなたの現場の言葉で、話しかけてみよう」
+
+【デザイン要件】
+- 1ファイルHTML（CSS・JS込み）で完結
+- ダークテーマ、Claudeオレンジ（#d97757）アクセント
+- スクロールフェードインアニメーション
+- スマホ対応
+- 絵文字をイラスト代わりに活用
+
+first-step.html として保存してください。
+      <button class="copy-btn" onclick="copyBox('box-noneng', this)">📋 コピーする</button></div>
     </div>
   </div>
 </section>
@@ -533,7 +595,7 @@ Claude Code を使って自動化するアイデアとサンプルコードを�
     <div class="community-card fi delay-2">
       <div class="icon">📖</div>
       <h3>上のプロンプトを試す</h3>
-      <p>まず「自己紹介LP」から。動いたら次へ。小さな成功を積み重ねる。</p>
+      <p>自分の立場のタブを選んでコピー。貼り付けるだけで動くLPが生まれる。</p>
     </div>
     <div class="community-card fi delay-3">
       <div class="icon">🌐</div>
@@ -600,10 +662,12 @@ Claude Code を使って自動化するアイデアとサンプルコードを�
     btn.classList.add('active');
   }
 
-  // Copy
+  // Copy (exclude button text)
   function copyBox(id, btn) {
     const box = document.getElementById(id);
-    const text = box.innerText.replace('📋 コピーする', '').trim();
+    const clone = box.cloneNode(true);
+    clone.querySelectorAll('button').forEach(b => b.remove());
+    const text = clone.innerText.trim();
     navigator.clipboard.writeText(text).then(() => {
       btn.textContent = '✅ コピーしました！';
       setTimeout(() => btn.textContent = '📋 コピーする', 2500);
